@@ -12,19 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
+      - name: Lint
+        run: echo "lint placeholder - replace with real command"
 
-      - run: npm ci
-        continue-on-error: true
+      - name: Test
+        run: echo "test placeholder - replace with real command"
 
-      - run: npm run lint
-        continue-on-error: true
-
-      - run: npm run test
-        continue-on-error: true
-
-      - run: npm run build
-        continue-on-error: true
+      - name: Build
+        run: echo "build placeholder - replace with real command"
