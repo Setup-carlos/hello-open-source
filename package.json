@@ -1,21 +1,21 @@
 {
-  "name": "project-name",
-  "version": "0.0.0",
-  "description": "Short description of the project",
+  "name": "hello-open-source",
+  "version": "0.1.0",
+  "description": "A minimal example repository following open-source standards",
   "license": "MIT",
   "author": "Setup-carlos <gxiolong@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Setup-carlos/project-name.git"
+    "url": "git+https://github.com/Setup-carlos/hello-open-source.git"
   },
   "bugs": {
-    "url": "https://github.com/Setup-carlos/project-name/issues"
+    "url": "https://github.com/Setup-carlos/hello-open-source/issues"
   },
-  "homepage": "https://github.com/Setup-carlos/project-name#readme",
+  "homepage": "https://github.com/Setup-carlos/hello-open-source#readme",
   "scripts": {
     "lint": "echo 'add lint command'",
     "test": "echo 'add test command'",
     "build": "echo 'add build command'"
   },
-  "keywords": []
+  "keywords": ["open-source", "template", "example"]
 }
