@@ -435,7 +435,54 @@ git push origin v1.0.0
 
 ---
 
-## 十一、你现在的任务清单
+## 十一、常见问题排查
+
+### PR 合并不了，提示规则不满足
+
+常见原因：
+
+1. **CI 没通过**
+   - 去 PR 页面看 Checks 标签
+   - 点进去看失败原因
+   - 本地修好后重新 push
+
+2. **commit 没有 GPG 签名**
+   - 如果仓库要求签名，你的 commit 必须有 `-S`
+   - 先配置 GPG key，然后重新提交
+
+3. **分支有冲突**
+   - 执行：
+     ```bash
+     git checkout main
+     git pull origin main
+     git checkout 你的分支
+     git rebase main
+     # 解决冲突后
+     git push origin 你的分支 --force-with-lease
+     ```
+
+4. **需要 approve 但没人审批**
+   - 单人项目：把 ruleset 的 `Required approvals` 改成 0
+   - 多人项目：找同事点 Approve
+
+5. **旧 PR 因为分支被删无法合并**
+   - 关闭旧 PR
+   - 基于最新 main 重新切分支
+   - 重新提交并开新 PR
+
+### 管理员强制合并（备用方案）
+
+如果你确定代码没问题，但规则卡住了，可以用管理员权限合并：
+
+```bash
+gh pr merge PR编号 --admin
+```
+
+> 警告：这相当于绕过规则，只在紧急情况下用。平时应该让 CI 和规则正常通过。
+
+---
+
+## 十二、你现在的任务清单
 
 - [ ] 复制 `open-source-template` 创建新项目
 - [ ] 改 README 和 package.json
@@ -446,7 +493,7 @@ git push origin v1.0.0
 
 ---
 
-## 十二、常用命令速查表
+## 十三、常用命令速查表
 
 | 想做什么 | 命令 |
 |---|---|
