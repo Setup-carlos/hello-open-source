@@ -1,23 +1,34 @@
-# hello-open-source
+# Project Name
 
-A minimal example repository following open-source standards.
+![CI](https://github.com/Setup-carlos/project-name/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Short description of the project.
+
+## Features
+
+- Feature one
+- Feature two
 
 ## Installation
 
 ```bash
-git clone https://github.com/Setup-carlos/hello-open-source.git
-cd hello-open-source
+npm install project-name
 ```
 
 ## Usage
 
 ```bash
-echo "Hello, open source!"
+# usage examples
 ```
 
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## Security
+
+See [SECURITY.md](./SECURITY.md).
 
 ## License
 

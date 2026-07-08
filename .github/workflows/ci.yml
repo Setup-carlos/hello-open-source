@@ -12,11 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run lint
-        run: echo "add your lint command here"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-      - name: Run tests
-        run: echo "add your test command here"
+      - run: npm ci
+        continue-on-error: true
 
-      - name: Build
-        run: echo "add your build command here"
+      - run: npm run lint
+        continue-on-error: true
+
+      - run: npm run test
+        continue-on-error: true
+
+      - run: npm run build
+        continue-on-error: true

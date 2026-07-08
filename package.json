@@ -1,0 +1,21 @@
+{
+  "name": "project-name",
+  "version": "0.0.0",
+  "description": "Short description of the project",
+  "license": "MIT",
+  "author": "Setup-carlos <gxiolong@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Setup-carlos/project-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Setup-carlos/project-name/issues"
+  },
+  "homepage": "https://github.com/Setup-carlos/project-name#readme",
+  "scripts": {
+    "lint": "echo 'add lint command'",
+    "test": "echo 'add test command'",
+    "build": "echo 'add build command'"
+  },
+  "keywords": []
+}
