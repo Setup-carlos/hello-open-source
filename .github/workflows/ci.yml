@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run lint
+        run: echo "add your lint command here"
+
+      - name: Run tests
+        run: echo "add your test command here"
+
+      - name: Build
+        run: echo "add your build command here"

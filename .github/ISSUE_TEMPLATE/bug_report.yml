@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a bug
+title: "[bug] "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce it?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What did you expect?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Environment
+      description: OS, runtime version, etc.
