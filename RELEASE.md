@@ -15,7 +15,61 @@ git pull origin main
 
 ---
 
-## 二、决定版本号
+## 二、更新 CHANGELOG
+
+发版前，先把这次改动写进 `CHANGELOG.md`。这是给所有人看的"更新摘要"。
+
+### 格式示例
+
+```markdown
+## [0.1.1] - 2026-07-08
+
+### Added
+
+- 新增功能 A
+- 新增文档 B
+
+### Changed
+
+- 改进了 C
+- 优化了 D
+
+### Fixed
+
+- 修复了 bug E
+```
+
+### 改动类型
+
+| 类型 | 含义 |
+|---|---|
+| Added | 新增功能或文件 |
+| Changed | 改动现有功能 |
+| Deprecated | 即将移除的功能 |
+| Removed | 移除功能或文件 |
+| Fixed | 修复 bug |
+| Security | 安全相关修复 |
+
+### 操作步骤
+
+1. 打开 `CHANGELOG.md`
+2. 在 `## [Unreleased]` 下面新增一个版本号小节
+3. 列出本次改动的要点
+4. 保存并提交
+
+```bash
+git checkout -b docs/update-changelog
+# 修改 CHANGELOG.md
+git add CHANGELOG.md
+git commit -S -m "docs: update changelog for v0.1.1"
+git push origin docs/update-changelog
+gh pr create --title "docs: update changelog for v0.1.1" --body "Adds release notes for v0.1.1."
+# 等 PR 合并
+```
+
+---
+
+## 三、决定版本号
 
 本项目使用 [语义化版本](https://semver.org/lang/zh-CN/)：
 
@@ -33,7 +87,7 @@ git pull origin main
 
 ---
 
-## 三、打标签
+## 四、打标签
 
 标签就是给某个 commit 贴一个永久记号，表示"这是某个版本"。
 
@@ -47,7 +101,7 @@ git tag -s v0.1.0 -m "Release v0.1.0"
 
 ---
 
-## 四、推送标签
+## 五、推送标签
 
 ```bash
 git push origin v0.1.0
@@ -57,7 +111,7 @@ git push origin v0.1.0
 
 ---
 
-## 五、查看 Release
+## 六、查看 Release
 
 打开浏览器：
 
@@ -69,7 +123,7 @@ https://github.com/Setup-carlos/hello-open-source/releases
 
 ---
 
-## 六、完整命令
+## 七、完整命令
 
 ```bash
 git checkout main
@@ -81,7 +135,7 @@ git push origin v0.1.0
 
 ---
 
-## 七、如果 Release 没有自动生成
+## 八、如果 Release 没有自动生成
 
 可能原因：
 
@@ -106,7 +160,7 @@ gh run list --workflow release.yml
 
 ---
 
-## 八、手动创建 Release（备用）
+## 九、手动创建 Release（备用）
 
 如果自动流程坏了，可以手动创建：
 
@@ -116,7 +170,7 @@ gh release create v0.1.0 --title "v0.1.0" --notes "Release notes here"
 
 ---
 
-## 九、发布检查清单
+## 十、发布检查清单
 
 - [ ] `main` 分支代码最新
 - [ ] CI 全部通过
